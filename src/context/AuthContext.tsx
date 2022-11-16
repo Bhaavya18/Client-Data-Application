@@ -21,7 +21,6 @@ export const UserContextProvider: FC<Props> = ({ children }) => {
   }
   useEffect(() => {
     const authState = onAuthStateChanged(auth, (currentUser) => {
-      console.log(currentUser);
       setUser(currentUser);
     });
     return () => {

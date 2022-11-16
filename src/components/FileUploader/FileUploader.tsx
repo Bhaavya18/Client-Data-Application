@@ -51,8 +51,6 @@ export function FileUploader({
     }
   }
   const onDrop = useCallback((acceptedFiles: File[]) => {
-    console.log(acceptedFiles);
-    console.log(process.env);
     if (isBusinessCard) {
       if (updateEmail !== undefined) updateEmail("");
       if (updateMobilePhone !== undefined) updateMobilePhone("");
