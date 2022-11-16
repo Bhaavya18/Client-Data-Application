@@ -1,26 +1,46 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import Form from "./components/Form/Form";
+import { Home } from "./components/Home/Home";
+import { Login } from "./components/Login/Login";
+import { UserContextProvider } from "./context/AuthContext";
+import { ProtectedRoutes } from "./components/ProtectedRoutes/ProtectedRoutes";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <UserContextProvider>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route
+          path="/home"
+          element={
+            <ProtectedRoutes>
+              <Home />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/create/"
+          element={
+            <ProtectedRoutes>
+              <Form isDisabled={false} />
+            </ProtectedRoutes>
+          }
+        />
+        <Route
+          path="/view/:id"
+          element={
+            <ProtectedRoutes>
+              <Form isDisabled={true} />
+            </ProtectedRoutes>
+          }
+        />
+      </Routes>
+    </UserContextProvider>
   );
 }
 
 export default App;
+
+/*
+Authentication: https://www.youtube.com/watch?v=x62aBvnRCKw
+*/

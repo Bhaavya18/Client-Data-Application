@@ -1,0 +1,68 @@
+.myForm{
+  margin-left: auto;
+  margin-right: auto;
+  width: 40%;
+  padding: 35px;
+  border: solid black 2px;
+}
+.inputFiles{
+  display: grid;
+  grid-template-columns: 9rem 9rem 9rem;
+  grid-gap: 0.9rem;
+  margin-top: 12px;
+}
+.myForm input{
+  display:block;
+  margin-bottom: 15px;
+  width: 97%;
+  padding: 5px;
+  font-size: 1.1rem;
+}
+.myForm label{
+  display:block;
+   margin-bottom: 10px;
+}
+.myForm button{
+  width: 60px;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+  color:white;
+}
+.Add{
+  float:right;
+  background-color:#8F00FF;
+}
+.myForm .submit{
+  width: 100%;
+  background-color: #4169e1;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  padding: 10px;
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+.myForm fieldset{
+  border:none;
+  padding:0;
+  margin:0;
+}
+.editBox{
+  text-align: right;
+}
+.myForm .edit{ /* prioritizing edit class over button otherwise */
+  height: 10%;
+  background: none;
+  color: black;
+  background: none;
+  text-align: right;
+  padding: 0;
+  margin-bottom: 12px;
+}
+.myForm .edit:hover{
+  color:#C16512;
+  text-decoration: underline;
+}

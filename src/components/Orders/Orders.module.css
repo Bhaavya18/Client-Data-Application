@@ -1,0 +1,47 @@
+.Orders{
+  margin-bottom: 25px;
+}
+.hide{
+  background-color: #ff0000b3;
+}
+.show{
+  background-color: green;
+}
+.orderBox{
+  border: solid 1px;
+  margin-top: 22px;
+  padding: 10px;
+  margin-bottom:15px;
+}
+.deleteIcon{
+  float:right;
+  font-size: 1.7rem;
+}
+.orderBox table,.orderBox th,.orderBox td{
+  border:solid 1px;
+  border-collapse:collapse;
+  padding:3px;
+}
+.orderBox tr{
+  width:12px;
+}
+.orderBox input{
+  margin: 0;
+  border:none;
+}
+.orderBox :focus{
+  outline:none;
+}
+.orderBox input::-webkit-outer-spin-button,
+.orderBox input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+/* Firefox */
+.orderBox input[type=number] {
+  -moz-appearance: textfield;
+}
+.orderBox .orderDate{
+  border:1px solid;
+  margin-bottom: 15px;
+}

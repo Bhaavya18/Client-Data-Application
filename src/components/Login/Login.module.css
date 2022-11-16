@@ -1,0 +1,36 @@
+.box{
+    border:1px solid;
+    margin-left:auto;
+    margin-right:auto;
+    width:40%;
+    padding:20px;
+    margin-top:5%;
+}
+.box form{
+    width:100%;
+}
+.box input{
+    display: block;
+    width: -moz-available;          
+    width: -webkit-fill-available;  
+    width: stretch;
+    margin-bottom: 15px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 1.1rem;
+}
+.box label{
+    margin-bottom: 5px;
+}
+.box .submit{
+    border: none;
+    border-radius: 5px;
+    background-color: #4169e1;
+    color: white;
+    padding: 7px;
+    margin-top: 2rem;
+    font-size: inherit;
+}
+.heading{
+    text-align: center;
+}

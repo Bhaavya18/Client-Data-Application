@@ -1,0 +1,105 @@
+.homeBox {
+  text-align: center;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.homeBar {
+  background-color: #5072a7;
+  padding: 6px;
+  text-align: right;
+}
+.search {
+  margin-bottom: 25px;
+  position: relative;
+}
+.searchBox {
+  width: 75%;
+  height: 27px;
+  padding: 3px;
+  font-size: 1.1rem;
+}
+.searchBox:focus {
+  outline: none;
+}
+.searchIcon{
+  position: absolute;
+  top:30%;
+  left:84%;
+}
+.clientBox {
+  background-color: #f2f8fb;
+  border: solid 1px;
+  border-radius: 5px;
+  padding: 10px;
+  margin-bottom: 12px;
+  text-align: left;
+}
+.home button {
+  background-color: #e1bfb4;
+  color: black;
+  width: 5rem;
+  padding: 6px;
+  border: none;
+  border-radius: 5px;
+  font-family: inherit;
+  font-size: 1rem;
+}
+.home button:hover {
+  background-color: #e17e80;
+  color: white;
+}
+.create {
+  float: right;
+}
+.clientName {
+  margin-top: 0;
+}
+.clientDelete {
+  float: right;
+  font-size: 1.3rem;
+}
+.clientDelete:hover {
+  color: red;
+}
+.pageBtns {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  height: 30px;
+  padding: 2px;
+  margin-bottom: 0;
+  position: absolute;
+  bottom:0;
+  left: 50%;
+  right: 50%;
+  margin-bottom: 0;
+}
+.pageBtns li {
+  width: 25px;
+  border-top: 1px solid black;
+  border-left: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+.pageBtns a {
+  padding: 5px;
+  cursor: pointer;
+}
+.pageBtns li:hover{
+  background-color: #DCDCDC;
+}
+.nextBtn {
+  border-right: solid 1px black;
+}
+.activePage{
+  background-color: #0d6efd;
+  color: white;
+}
+.activePage:hover{
+  color:black;
+}
+.usersBox{
+  height: 380px;
+  position: relative;
+}

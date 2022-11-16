@@ -1,0 +1,29 @@
+.fileUploader{
+  border: dotted #86a5ba;
+  text-align: center;
+  height: 80px;
+  background-color: #f4fcff;
+  padding:10px;
+}
+.fileUploader input{
+  width:inherit;
+}
+.upload{
+  font-size: 200%;
+}
+.inputFiles{
+  display: grid;
+  grid-template-columns: 9rem 9rem 9rem;
+  grid-gap: 0.9rem;
+  margin-top: 12px;
+}
+.fileImage{
+  height:130px;
+  width:130px;
+  border:solid 1px;
+}
+.fileDetails{
+  margin-top:0;
+  text-align: center;
+  font-size:0.8rem;
+}
