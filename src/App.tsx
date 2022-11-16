@@ -41,6 +41,3 @@ function App() {
 
 export default App;
 
-/*
-Authentication: https://www.youtube.com/watch?v=x62aBvnRCKw
-*/

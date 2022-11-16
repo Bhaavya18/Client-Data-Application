@@ -125,5 +125,3 @@ export function FileUploader({
     </div>
   );
 }
-//https://www.youtube.com/watch?v=S4zaZvM8IeI 
-//https://www.youtube.com/watch?v=YOAeBSCkArA&t=948s
