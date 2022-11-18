@@ -5,7 +5,6 @@ import { InputFiles } from "./InputFiles";
 import {FiUpload} from "react-icons/fi"
 import styles from "./FileUploader.module.css";
 import axios from "axios";
-import md5 from "md5";
 export interface myFile{
     id: number;
     fileName: string;
