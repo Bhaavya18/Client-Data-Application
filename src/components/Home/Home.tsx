@@ -36,8 +36,16 @@ export function Home() {
     return (() => {    //executed when component unmounts
       document.body.style.margin = "2%";
     });
-  }, []);
+  }, [usersCollectionRef]);
   useEffect(() => {
+    const getUser = (user: user) => {
+      if (
+        searchTerm === "" ||
+        user.Name.toLowerCase().includes(searchTerm.toLowerCase())
+      )
+        return true;
+      return false;
+    };
     setSearchRes(users.filter((user) => getUser(user)));
   }, [searchTerm, users]);
   const deleteFolder = async (sid: string) => {
@@ -81,11 +89,6 @@ export function Home() {
          console.log("Unexpected error", error);
        }
     }
-  }
-  const getUser = (user:user) => {
-    if (searchTerm === "" || user.Name.toLowerCase().includes(searchTerm.toLowerCase()))
-      return true;
-    return false;
   }
   return (
     <div className={styles.home}>

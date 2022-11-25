@@ -218,20 +218,20 @@ function Form({ isDisabled }: Prop) {
     try {
       const url = await getDownloadURL(ref(storage, fileName));
       if (isBusinessCard) {
-        setBusinessCardURL({
+        businessCardURLRef.current={
+          id: Math.floor(Math.random() * 10000) + 1,
+          fileName: originalFileName,
+          url: url,
+        };
+      } else {
+        const newOrderImagesURL = [...orderImagesURLRef.current];
+        //We don't want re-render that is why we are not updating state
+        newOrderImagesURL.push({
           id: Math.floor(Math.random() * 10000) + 1,
           fileName: originalFileName,
           url: url,
         });
-      } else {
-        setOrderImagesURL((prevState) => [
-          ...prevState,
-          {
-            id: Math.floor(Math.random() * 10000) + 1,
-            fileName: originalFileName,
-            url: url,
-          },
-        ]);
+        orderImagesURLRef.current = newOrderImagesURL;
       }
     } catch {
       console.log(Error);
