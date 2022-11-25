@@ -65,7 +65,8 @@ function Form({ isDisabled }: Prop) {
     undefined
   );
   const [orderImagesURL, setOrderImagesURL] = useState<myFile[]>([]);
-  const [isDone, setIsDone] = useState(false);
+  const orderImagesURLRef = useRef(orderImagesURL);
+  const businessCardURLRef = useRef(businessCardURL);
   const [orders, setOrders] = useState<order[]>([
     {
       orderID: Math.floor(Math.random() * 100) + 1,
@@ -117,7 +118,13 @@ function Form({ isDisabled }: Prop) {
       };
       getDocData();
     }
-  }, []);
+  }, [id]);
+  useEffect(() => {
+    orderImagesURLRef.current = orderImagesURL;
+  }, [orderImagesURL]);
+  useEffect(() => {
+    businessCardURLRef.current = businessCardURL;
+  },[businessCardURL])
   const getData = () => {
     const data: formData = {
       companyName: companyName,
@@ -130,8 +137,8 @@ function Form({ isDisabled }: Prop) {
       landLineNumber: landLineNumber,
       website: website,
       orders: orders,
-      orderImages: orderImagesURL,
-      businessCard: businessCardURL,
+      orderImages: orderImagesURLRef.current,
+      businessCard: businessCardURLRef.current,
       sid: sid,
     };
     if (data.ownerName === "") delete data.ownerName;
@@ -147,16 +154,11 @@ function Form({ isDisabled }: Prop) {
     if (data.businessCard === undefined) delete data.businessCard;
     return data;
   };
-  useEffect(() => {
-    const addOrUpdateUsers = async () => {
-      const docRef = doc(db, "Clients", id === undefined ? v4() : id);
-      await setDoc(docRef, getData());
-    };
-    if (isDone) {
-      addOrUpdateUsers();
-      navigate("/home", { replace: true });
-    }
-  }, [isDone]);
+  /******************************************Adding/Updating record in firebase DB******************************************************************************/
+  const addOrUpdateUsers = async () => {
+    const docRef = doc(db, "Clients", id === undefined ? v4() : id);
+    await setDoc(docRef, getData());
+};
   /**********************File Uploader Function****************************************************************************/
   const updateBusinessCard = (obj: myFile) => {
     setBusinessCard(obj);
@@ -329,7 +331,7 @@ function Form({ isDisabled }: Prop) {
       setOrders(values);
     }
   };
-  /************************************************************************************************************************************ */
+  /*************************************Updating Email/MobileNo./LandLine/Website*********************************************************************************************** */
   const updateEmail = (newEmail: string) => {
     setEmail(newEmail);
   };
@@ -350,12 +352,11 @@ function Form({ isDisabled }: Prop) {
           try {
             await allDeletions();
             await allUploads();
-            setIsDone(true);
+            await addOrUpdateUsers();
           } catch {
             alert(Error);
-            setIsDone(false);
-            navigate("/home");
           }
+          navigate("/home", { replace: true });
         }}
       >
         {id !== undefined && (
