@@ -1,4 +1,3 @@
-
 # Client Data Web Application
 
 A data organization web application that helps in creating new business memories and analyzing needs of the clients based on their past order history.
@@ -13,28 +12,28 @@ React, TypeScript, Firebase
 
 # Features
 * Login: Only Authenticated user can view and make changes in database.
-  ![image](https://user-images.githubusercontent.com/53914778/202746978-562a7dd9-74d4-40f2-8f34-699176b5a141.png)
+  ![image](https://user-images.githubusercontent.com/53914778/212461432-e20dbdb0-6d23-424e-91ec-6dd13665fb9f.png)
 * Creating New Client
     * Click on create button
-      ![image](https://user-images.githubusercontent.com/53914778/202747377-07ce409a-9959-4fdb-861d-9959ab3554b0.png)
+     ![image](https://user-images.githubusercontent.com/53914778/212461512-a573a87a-2dd0-4b85-8150-f338e8a0c156.png)
     * Upload business card image.
-      ![image](https://user-images.githubusercontent.com/53914778/202747500-9000bf72-d10e-4dbd-a66f-aad09bb7bd91.png)
+      ![image](https://user-images.githubusercontent.com/53914778/212461559-fe76a66c-34df-4371-8a61-1a368f29fc1e.png)
       Data that is read from it is automatically filled.
-      ![image](https://user-images.githubusercontent.com/53914778/202748194-4d3b1454-b9ff-4386-9203-31f150c97a75.png)
+      ![image](https://user-images.githubusercontent.com/53914778/212461589-d1e8baf5-2dd2-4579-9199-e2e15e8e0e43.png)
     * For adding orders click on plus icon.
-      ![image](https://user-images.githubusercontent.com/53914778/202748362-0456b5ba-4234-4560-84e3-a7b1d8faec3c.png)
+      ![image](https://user-images.githubusercontent.com/53914778/212461678-da6f99a0-7bfe-4241-9af3-2e458bd66177.png)
     * Upload product images.
-      ![image](https://user-images.githubusercontent.com/53914778/202748536-12d2632a-3d02-476f-af49-89094e351c67.png)
+      ![image](https://user-images.githubusercontent.com/53914778/212461741-24c020d6-9d10-43d0-9cf7-8a90f6ad0630.png)
 * Searching Clients
-  ![image](https://user-images.githubusercontent.com/53914778/202748813-134b46ab-6f57-4074-895a-146a99607616.png)
+  ![image](https://user-images.githubusercontent.com/53914778/212461769-b67adb8f-08cb-4b01-8e07-d956dbf0f40d.png)
 * Viewing Client Information
     * Click on view button to see client information.
-      ![image](https://user-images.githubusercontent.com/53914778/202749012-2fa6bb99-9a8b-4f6b-8582-a57de97ef965.png)
+      ![image](https://user-images.githubusercontent.com/53914778/212461801-c6edb838-fbea-4a8b-8c1e-d90f181cc147.png)
 * Inorder to edit client's information click on edit button and submit it after making changes.
-  ![image](https://user-images.githubusercontent.com/53914778/202749155-5e6dbfac-7e74-446c-8b8b-32da1a286d67.png)
+  ![image](https://user-images.githubusercontent.com/53914778/212461837-a38fe5ca-fcf4-46ab-81b2-5bc66602a644.png)
 * Deleting Clients
     * Click on Delete button
-      ![image](https://user-images.githubusercontent.com/53914778/202749337-11d30fd4-16fb-4202-905f-4f99d348a47b.png)
+      ![image](https://user-images.githubusercontent.com/53914778/212461876-a305c6de-7490-4c2e-9eea-8d11bf774fe6.png)
 
 
                   
